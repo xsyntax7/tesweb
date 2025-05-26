@@ -507,3 +507,70 @@ footer p {
 #resetBtn:hover {
   background-color: #9FB3DF;
 }
+
+
+@media (max-width: 768px) {
+  /* Navbar */
+  nav a {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Ubah grid katalog dari 5 kolom jadi 2-3 kolom */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Kontainer lokasi jadi vertikal */
+  .location-container {
+    flex-direction: column;
+  }
+
+  /* Lebar container lokasi foto dan peta jadi full */
+  .location-photo,
+  .location-map {
+    flex: 1 1 100%;
+  }
+
+  /* Ukuran font header lebih kecil */
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Navbar teks makin kecil dan spasi lebih rapat */
+  nav a {
+    margin-left: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* Katalog cuma 1 kolom */
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Padding main dikurangi agar muat */
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Ukuran font header makin kecil */
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Tombol makin lebar dan lebih mudah diklik */
+  .btn-see-more, .btn-submit, .catalog-item button {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
